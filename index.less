@@ -1,0 +1,97 @@
+@import './CSSReset.less';
+
+@palette-teal: #66afba;
+@palette-white: #e7e7e7;
+@palette-yellow: #e8ca34;
+@pallete-red: #d72f29;
+@pallete-blue: #008ac9;
+
+.font-main {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex(@d, @j, @a) {
+  display: flex;
+  flex-direction: @d;
+  justify-content: @j;
+  align-items: @a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+button {
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+header {
+  top: 0;
+  width: 100%;
+  height: 8rem;
+  position: fixed;
+  background-color: @palette-teal;
+  color: @palette-white;
+  font-size: 4rem;
+  .font-main;
+
+  .flex(row, space-between, center);
+
+  #nav-left {
+    .flex(row, space-around, center);
+    height:100%;
+
+    .fas {
+      font-size: 6rem;
+      margin: 0 2rem;
+    }
+
+    nav {
+      .flex(row, space-between, center);
+      height: 100%;
+
+      .nav-item {
+        .flex(column, center, center);
+        height: 100%;
+        margin: 2rem 1rem;
+        &:hover {
+          background-color: @palette-white;
+        }
+        &:hover a {
+          color:@palette-teal;
+        }
+        a {
+          margin: 0 1rem;
+          color: @palette-white;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  #nav-right {
+    button {
+      color: @palette-teal;
+      background-color: @palette-yellow;
+      padding: 1rem;
+      font-size: 4rem;
+      border-radius: 4rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+#main-container {
+  margin-top: 8rem;
+  #intro-jumbo {
+
+  }
+  .three-panel {
+
+  }
+}
