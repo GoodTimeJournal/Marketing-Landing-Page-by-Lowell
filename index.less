@@ -1,5 +1,9 @@
 @import './CSSReset.less';
 
+@media @tablet {
+  @palette-light-gray: yellow;
+}
+
 @palette-teal: #66afba;
 @palette-white: #fff;
 @palette-yellow: #fbcc99;
@@ -8,8 +12,8 @@
 @palette-light-gray: #f1f5f9;
 @palette-gray: #777;
 
-@tablet: ~"(min-width: 800px)";
-@desktop: ~"(min-width: 1024px)";
+@tablet: ~"(min-width: 550px)";
+@desktop: ~"(min-width: 850px)";
 
 .font-main {
   font-family: 'Montserrat', sans-serif;
@@ -28,7 +32,6 @@
 
 html {
   font-size: 62.5%;
-  .font-main;
 }
 
 button {
@@ -38,6 +41,7 @@ button {
 }
 
 h1, h2, h3, p {
+  .font-main;
   line-height: 1.4;
 }
 
@@ -57,7 +61,7 @@ p {
 header {
   @media @tablet {
     .flex(row, space-between, center);
-    height: 8rem;
+    height: 10rem;
     position: fixed;
   }
   @media @desktop {
@@ -75,32 +79,30 @@ header {
   #nav-left {
     @media @tablet {
       .flex(row, space-around, center);
+      max-width: 40%;
     }
     @media @desktop {
   
     }
-    
     .flex(column, center, center);
     height:100%;
     width: 100%;
-
     .fas {
       font-size: 6rem;
       margin: 0 2rem;
     }
-
     nav {
-
       @media @tablet {
-        .flex(row, space-betweem, center);
+        .flex(row, space-between, center);
       }
       @media @desktop {
     
       }
-      
+      img {
+        max-height: 100%;
+      }
       .flex(column, center, center);
       height: 100%;
-
       .nav-item {
         .flex(column, center, center);
         height: 100%;
@@ -120,18 +122,22 @@ header {
     }
   }
   #nav-right {
+    @media @tablet {
+      max-width: 60%;
+    }
     .flex(column, center, center);
     width: 100%;
     margin: 2rem;
-    button {
+    a {
       color: @palette-blue;
       background-color: @palette-white;
       border: 0.5rem solid @palette-light-gray;
-      padding: 1rem 4rem;
+      padding: 1.4rem;
       font-size: 3rem;
       border-radius: 1rem;
       margin-right: 2rem;
       font-weight: 600;
+      text-decoration: none;
       &:hover {
         color: @palette-white;
         background-color: @palette-blue;
@@ -142,7 +148,7 @@ header {
 
 #main-container {
   @media @tablet {
-    margin-top: 8rem;
+    margin-top: 10rem;
   }
   @media @desktop {
 
@@ -150,16 +156,16 @@ header {
   
   #intro-jumbo {
     width: 100%;
-    padding: 3rem 4rem;
+    padding: 8rem 4rem 4rem 4rem;
     background-color: @palette-blue;
     color: @palette-white;
   }
   .mini-panel-container {
     @media @tablet {
-      .flex(row, space-around, center);
+      
     }
     @media @desktop {
-  
+      .flex(row, space-around, center);
     }
     
     .flex(column, center, center);
