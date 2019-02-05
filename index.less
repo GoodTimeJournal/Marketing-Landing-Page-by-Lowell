@@ -8,6 +8,9 @@
 @palette-light-gray: #f1f5f9;
 @palette-gray: #777;
 
+@tablet: ~"(min-width: 800px)";
+@desktop: ~"(min-width: 1024px)";
+
 .font-main {
   font-family: 'Montserrat', sans-serif;
 }
@@ -25,6 +28,7 @@
 
 html {
   font-size: 62.5%;
+  .font-main;
 }
 
 button {
@@ -33,34 +37,52 @@ button {
   text-shadow: 0px 0px 0px transparent;
 }
 
+h1, h2, h3, p {
+  line-height: 1.4;
+}
+
 h1 {
-  font-size: 5rem;
+  font-size: 3.6rem;
 }
 h2 {
-  font-size:3.4rem;
+  font-size:3.2rem;
 }
 h3 {
-  font-size: 2.6rem;
+  font-size: 2.64rem;
 }
 p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 header {
+  @media @tablet {
+    .flex(row, space-between, center);
+    height: 8rem;
+    position: fixed;
+  }
+  @media @desktop {
+
+  }
   top: 0;
   width: 100%;
-  height: 8rem;
-  position: fixed;
   background-color: @palette-blue;
   color: @palette-white;
   font-size: 4rem;
   .font-main;
 
-  .flex(row, space-between, center);
+  .flex(column, center, center);
 
   #nav-left {
-    .flex(row, space-around, center);
+    @media @tablet {
+      .flex(row, space-around, center);
+    }
+    @media @desktop {
+  
+    }
+    
+    .flex(column, center, center);
     height:100%;
+    width: 100%;
 
     .fas {
       font-size: 6rem;
@@ -68,7 +90,15 @@ header {
     }
 
     nav {
-      .flex(row, space-between, center);
+
+      @media @tablet {
+        .flex(row, space-betweem, center);
+      }
+      @media @desktop {
+    
+      }
+      
+      .flex(column, center, center);
       height: 100%;
 
       .nav-item {
@@ -90,35 +120,55 @@ header {
     }
   }
   #nav-right {
+    .flex(column, center, center);
+    width: 100%;
+    margin: 2rem;
     button {
       color: @palette-blue;
       background-color: @palette-white;
-      border: 0.2rem solid @palette-blue;
-      padding: 1rem 2rem;
-      font-size: 4rem;
+      border: 0.5rem solid @palette-light-gray;
+      padding: 1rem 4rem;
+      font-size: 3rem;
       border-radius: 1rem;
       margin-right: 2rem;
+      font-weight: 600;
+      &:hover {
+        color: @palette-white;
+        background-color: @palette-blue;
+      }
     }
   }
 }
 
 #main-container {
-  margin-top: 8rem;
-  padding-top: 2rem;
+  @media @tablet {
+    margin-top: 8rem;
+  }
+  @media @desktop {
+
+  }
+  
   #intro-jumbo {
-    width: 50%;
-    padding: 3rem 2rem;
+    width: 100%;
+    padding: 3rem 4rem;
     background-color: @palette-blue;
     color: @palette-white;
   }
   .mini-panel-container {
-    .flex(row, space-around, center);
+    @media @tablet {
+      .flex(row, space-around, center);
+    }
+    @media @desktop {
+  
+    }
+    
+    .flex(column, center, center);
     width: 100%;
     padding: 3rem 2rem;
 
     .mini-panel {
       .flex(column, center, center);
-      margin: 0 2rem;
+      margin: 2rem;
       padding: 1rem;
       background-color: @palette-light-gray;
 
@@ -127,7 +177,7 @@ header {
         color: @palette-blue;
       }
       h3 {
-        margin: 1rem 0;
+        margin: 1rem;
       }
       p {
         color: @palette-gray;
@@ -136,13 +186,25 @@ header {
   }
 
   .panel-and-picture-container {
-    .flex(row, space-around, center);
+    @media @tablet {
+      .flex(row, space-around, center);
+    }
+    @media @desktop {
+  
+    }
+    .flex(column-reverse, center, center);
     width: 100%;
     padding: 3rem 2rem;
     background-color: @palette-light-gray;
 
     .panel {
-      width: 50%;
+      @media @tablet {
+        width:50%;
+      }
+      @media @desktop {
+    
+      }
+      width: 100%;
       h3 {
         margin: 1rem 0;
       }
@@ -160,7 +222,13 @@ header {
       }
     }
     .picture {
-      width: 50%;
+      @media @tablet {
+        width: 50%;
+      }
+      @media @desktop {
+    
+      }
+      width: 100%;
       img {
         max-width: 100%;
         max-height: 100%;
@@ -169,37 +237,37 @@ header {
     }
   }
 
-  .header-and-icons-container {
-    .flex(column, center, center);
-    width: 100%;
-    padding: 3rem 2rem;
-    background-color: @palette-white;
+  // .header-and-icons-container {
+  //   .flex(column, center, center);
+  //   width: 100%;
+  //   padding: 3rem 2rem;
+  //   background-color: @palette-white;
 
-    .icon-header {
-      margin: 2rem 0;
-    }
-    .icon-container {
-      .flex(row, space-between, center);
-      flex-wrap: wrap;
-      .icon {
-        .flex(column, center, center);
-        padding: 1rem;
-        width: 33%;
+  //   .icon-header {
+  //     margin: 2rem 0;
+  //   }
+  //   .icon-container {
+  //     .flex(row, space-between, center);
+  //     flex-wrap: wrap;
+  //     .icon {
+  //       .flex(column, center, center);
+  //       padding: 1rem;
+  //       width: 33%;
 
-        .fas {
-          padding: 1rem;
-          font-size: 5rem;
-          color: @palette-blue;
-          background-color: @palette-light-gray;
-          border-radius: 1rem;
+  //       .fas {
+  //         padding: 1rem;
+  //         font-size: 5rem;
+  //         color: @palette-blue;
+  //         background-color: @palette-light-gray;
+  //         border-radius: 1rem;
 
-          &:hover {
-            color: @palette-white;
-            background-color: @palette-blue;
-          }
-        }
-      }
-    }
-  }
+  //         &:hover {
+  //           color: @palette-white;
+  //           background-color: @palette-blue;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
 }
