@@ -198,19 +198,48 @@ header {
     }
   }
 
+  .about-us {
+    width: 100%;
+    .flex(row, center, center);
+    margin-top: 3rem;
+  }
+
   .section {
     width: 80%;
     margin: 45px auto;
     display: flex;
-    border: 2px solid @palette-blue;
-    border-radius: 1rem;
-    overflow: hidden;
+    background-color: @palette-light-gray;
+    // overflow: hidden;
     .box {
       padding: 40px;
       .box-title {
         font-size: 24px;
         padding-bottom: 10px;
         font-weight: bold;
+      }
+    }
+    .tabs {
+      .tabs-items {
+        .tabs-item {
+          .tabs-item-description {
+            .flex(row, flex-start, center);
+            padding-bottom: 4rem;
+            .item-left {
+              // border: 1px solid red;
+              max-width: 45%;
+              margin-right: 10%;
+              img {
+                // border: 1px solid red;
+                max-height: 100%;
+                max-width: 100%;
+              }
+            }
+            .item-right {
+              max-width: 45%;
+              // border: 1px solid red;
+            }
+          }
+        }
       }
     }
   }

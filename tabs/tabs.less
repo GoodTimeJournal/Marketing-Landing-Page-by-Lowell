@@ -2,49 +2,39 @@
   width: 100%;
   .tabs-items {
     width: 100%;
-    height: 300px;
+    // height: 300px;
     display: flex;
     justify-content: center;
     padding-top: 60px;
   }
   .tabs-item {
-    display: none; 
-
+    display: none;
     width: 75%;
-    .tabs-item-title {
-      font-size: 24px;
-      font-weight: bold;
-      padding-bottom: 10px;
-    }
   }
   .tabs-item-selected {
     display: block;
   }
-
   .tabs-links {
     display: flex;
     background-color: @palette-blue;
   }
 
   .tabs-link {
-    padding: 20px 25px;
-    font-size: 24px;
+    padding: 2rem;
+    font-size: 2rem;
     background-color: @palette-blue;
-    border-right: 1px solid white;
     color: @palette-white;
     cursor: pointer;
     &:hover {
-      background-color: @palette-light-gray;
+      background-color: @palette-white;
+      color: @palette-blue;
     }
   }
   .tabs-link-selected {
     z-index: 2;
-    border-right: 1px solid @palette-blue;
-    background-color: @palette-white;
-    color: black;
-    &:hover {
-      background-color: @palette-white;
-    }
+    background-color: @palette-light-gray;
+    color: @palette-blue;
+    font-weight: 600;
   }
 }
 
