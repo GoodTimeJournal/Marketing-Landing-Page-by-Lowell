@@ -1,4 +1,5 @@
 @import './CSSReset.less';
+@import './tabs/tabs.less';
 
 @palette-teal: #66afba;
 @palette-white: #fff;
@@ -7,6 +8,9 @@
 @palette-blue: #1e9df7;
 @palette-light-gray: #f1f5f9;
 @palette-gray: #777;
+@lambda-red: rgb(147,29,37);
+@lambda-light-red: lighten(@lambda-red,10%);
+@white: rgb(255,255,255);
 
 @tablet: ~"(min-width: 800px)";
 @desktop: ~"(min-width: 1024px)";
@@ -93,97 +97,6 @@ header {
     }
   }
 }
-//   .flex(column, center, center);
-
-// header {
-//   @media @tablet {
-    
-//   }
-//   @media @desktop {
-//     .flex(row, center, center);
-//     height: 10rem;
-//     position: fixed;
-//   }
-//   top: 0;
-//   width: 100%;
-//   background-color: @palette-blue;
-//   color: @palette-white;
-//   font-size: 4rem;
-//   .font-main;
-
-//   .flex(column, center, center);
-
-//   #nav-left {
-//     @media @tablet {
-      
-//     }
-//     @media @desktop {
-//       .flex(row, space-around, center);
-//     }
-//     .flex(column, center, center);
-//     height:100%;
-//     width: 100%;
-//     .fas {
-//       font-size: 6rem;
-//       margin: 0 2rem;
-//     }
-//     nav {
-//       @media @tablet {
-        
-//       }
-//       @media @desktop {
-//         .flex(row, space-between, center);
-//       }
-//       img {
-//         max-height: 100%;
-//       }
-//       .flex(column, center, center);
-//       height: 100%;
-//       .nav-item {
-//         .flex(column, center, center);
-//         height: 100%;
-//         margin: 2rem 1rem;
-//         &:hover {
-//           background-color: @palette-white;
-//         }
-//         &:hover a {
-//           color:@palette-blue;
-//         }
-//         a {
-//           margin: 0 1rem;
-//           color: @palette-white;
-//           text-decoration: none;
-//         }
-//       }
-//     }
-//   }
-//   #nav-right {
-//     @media @tablet {
-      
-//     }
-//     @media @desktop {
-
-//     }
-//     .flex(column, center, center);
-//     width: 100%;
-//     margin: 2rem;
-//     a {
-//       color: @palette-blue;
-//       background-color: @palette-white;
-//       border: 0.5rem solid @palette-light-gray;
-//       padding: 1.4rem;
-//       font-size: 3rem;
-//       border-radius: 1rem;
-//       margin-right: 2rem;
-//       font-weight: 600;
-//       text-decoration: none;
-//       &:hover {
-//         color: @palette-white;
-//         background-color: @palette-blue;
-//       }
-//     }
-//   }
-// }
 
 #main-container {
   @media @tablet {
@@ -285,37 +198,50 @@ header {
     }
   }
 
-  // .header-and-icons-container {
-  //   .flex(column, center, center);
-  //   width: 100%;
-  //   padding: 3rem 2rem;
-  //   background-color: @palette-white;
+  .about-us {
+    width: 100%;
+    .flex(row, center, center);
+    margin-top: 3rem;
+  }
 
-  //   .icon-header {
-  //     margin: 2rem 0;
-  //   }
-  //   .icon-container {
-  //     .flex(row, space-between, center);
-  //     flex-wrap: wrap;
-  //     .icon {
-  //       .flex(column, center, center);
-  //       padding: 1rem;
-  //       width: 33%;
-
-  //       .fas {
-  //         padding: 1rem;
-  //         font-size: 5rem;
-  //         color: @palette-blue;
-  //         background-color: @palette-light-gray;
-  //         border-radius: 1rem;
-
-  //         &:hover {
-  //           color: @palette-white;
-  //           background-color: @palette-blue;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  .section {
+    width: 80%;
+    margin: 45px auto;
+    display: flex;
+    background-color: @palette-light-gray;
+    // overflow: hidden;
+    .box {
+      padding: 40px;
+      .box-title {
+        font-size: 24px;
+        padding-bottom: 10px;
+        font-weight: bold;
+      }
+    }
+    .tabs {
+      .tabs-items {
+        .tabs-item {
+          .tabs-item-description {
+            .flex(row, flex-start, center);
+            padding-bottom: 4rem;
+            .item-left {
+              // border: 1px solid red;
+              max-width: 45%;
+              margin-right: 5%;
+              img {
+                // border: 1px solid red;
+                max-height: 100%;
+                max-width: 100%;
+              }
+            }
+            .item-right {
+              max-width: 45%;
+              // border: 1px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
 
 }
