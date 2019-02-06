@@ -144,6 +144,7 @@ table {
 }
 .tabs .tabs-links {
   display: flex;
+  flex-wrap: wrap;
   background-color: #1e9df7;
 }
 .tabs .tabs-link {
@@ -370,7 +371,7 @@ header a:hover {
 }
 #main-container .section .tabs .tabs-items .tabs-item .tabs-item-description .item-left {
   max-width: 45%;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 #main-container .section .tabs .tabs-items .tabs-item .tabs-item-description .item-left img {
   max-height: 100%;
