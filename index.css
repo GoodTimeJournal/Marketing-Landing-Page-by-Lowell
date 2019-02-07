@@ -396,3 +396,15 @@ header .external-button:hover {
 #main-container .section .tabs .tabs-items .tabs-item .tabs-item-description .item-right {
   max-width: 55%;
 }
+#main-container footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  background-color: #777;
+}
+#main-container footer p {
+  padding: 2rem;
+}
