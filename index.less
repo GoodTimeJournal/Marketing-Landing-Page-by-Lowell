@@ -8,9 +8,6 @@
 @palette-blue: #1e9df7;
 @palette-light-gray: #f1f5f9;
 @palette-gray: #777;
-@lambda-red: rgb(147,29,37);
-@lambda-light-red: lighten(@lambda-red,10%);
-@white: rgb(255,255,255);
 
 @tablet: ~"(min-width: 800px)";
 @desktop: ~"(min-width: 1024px)";
@@ -34,13 +31,7 @@ html {
   font-size: 62.5%;
 }
 
-button {
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
-}
-
-h1, h2, h3, p {
+h1, h2, h3, p, a, div {
   .font-main;
   line-height: 1.4;
 }
@@ -58,14 +49,12 @@ p {
   font-size: 1.6rem;
 }
 
-// *** This code was for a previous header bar.
-
 header {
   @media @tablet {
     
   }
   @media @desktop {
-    height: 20rem;
+    height: 15rem;
     position: fixed;
   }
   .flex(row, center, center);
@@ -73,7 +62,6 @@ header {
   width: 100%;
   background-color: @palette-blue;
   color: @palette-white;
-  font-size: 4rem;
   .font-main;
   img {
     @media @desktop {
@@ -81,19 +69,22 @@ header {
     }
     max-height: 100%;
   }
-  a {
-    color: @palette-blue;
-    background-color: @palette-white;
-    border: 0.5rem solid @palette-light-gray;
+  .about-button, .external-button {
+    @media @desktop {
+      font-size: 3rem;
+    }
+    color: @palette-white;
+    background-color: @palette-blue;
+    border: 0.2rem solid @palette-light-gray;
     padding: 1.4rem;
-    font-size: 3rem;
+    font-size: 2rem;
     border-radius: 1rem;
     margin-right: 2rem;
     font-weight: 600;
     text-decoration: none;
     &:hover {
-      color: @palette-white;
-      background-color: @palette-blue;
+      color: @palette-blue;
+      background-color: @palette-white;
     }
   }
 }
@@ -103,12 +94,12 @@ header {
     
   }
   @media @desktop {
-    margin-top: 20rem;
+    margin-top: 15rem;
   }
   
   #intro-jumbo {
     width: 100%;
-    padding: 8rem 4rem 4rem 4rem;
+    padding: 4rem;
     background-color: @palette-blue;
     color: @palette-white;
   }
@@ -125,6 +116,13 @@ header {
     padding: 3rem 2rem;
 
     .mini-panel {
+      @media @tablet {
+      
+      }
+      @media @desktop {
+        max-width: 30%;
+      }
+
       .flex(column, center, center);
       margin: 2rem;
       padding: 1rem;
@@ -170,15 +168,22 @@ header {
       }
       p {
         color: @palette-gray;
-        margin: 1rem 0;
+        margin: 2rem 0;
       }
-      button {
+      a {
+        text-decoration: none;
+        margin-top: 1rem;
         color: @palette-white;
         background-color: @palette-blue;
         border: 0.2rem solid @palette-white;
         padding: 1rem;
         font-size: 2rem;
         border-radius: 0.5rem;
+        &:hover {
+          color: @palette-blue;
+          background-color: @palette-white;
+          border: 0.2rem solid @palette-blue;
+        }
       }
     }
     .picture {
@@ -226,7 +231,7 @@ header {
             padding-bottom: 4rem;
             .item-left {
               // border: 1px solid red;
-              max-width: 45%;
+              max-width: 40%;
               margin-right: 5%;
               img {
                 // border: 1px solid red;
@@ -235,12 +240,23 @@ header {
               }
             }
             .item-right {
-              max-width: 45%;
+              max-width: 55%;
               // border: 1px solid red;
             }
           }
         }
       }
+    }
+  }
+
+  footer {
+    .flex(row, center, center);
+    width: 100%;
+    color:@palette-white;
+    background-color: @palette-gray;
+
+    p {
+      padding: 2rem;
     }
   }
 

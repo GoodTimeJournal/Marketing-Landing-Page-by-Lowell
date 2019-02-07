@@ -173,15 +173,12 @@ table {
 html {
   font-size: 62.5%;
 }
-button {
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
-}
 h1,
 h2,
 h3,
-p {
+p,
+a,
+div {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.4;
 }
@@ -206,12 +203,11 @@ header {
   width: 100%;
   background-color: #1e9df7;
   color: #fff;
-  font-size: 4rem;
   font-family: 'Montserrat', sans-serif;
 }
 @media (min-width: 1024px) {
   header {
-    height: 20rem;
+    height: 15rem;
     position: fixed;
   }
 }
@@ -223,29 +219,37 @@ header img {
     margin-right: 2rem;
   }
 }
-header a {
-  color: #1e9df7;
-  background-color: #fff;
-  border: 0.5rem solid #f1f5f9;
+header .about-button,
+header .external-button {
+  color: #fff;
+  background-color: #1e9df7;
+  border: 0.2rem solid #f1f5f9;
   padding: 1.4rem;
-  font-size: 3rem;
+  font-size: 2rem;
   border-radius: 1rem;
   margin-right: 2rem;
   font-weight: 600;
   text-decoration: none;
 }
-header a:hover {
-  color: #fff;
-  background-color: #1e9df7;
+@media (min-width: 1024px) {
+  header .about-button,
+  header .external-button {
+    font-size: 3rem;
+  }
+}
+header .about-button:hover,
+header .external-button:hover {
+  color: #1e9df7;
+  background-color: #fff;
 }
 @media (min-width: 1024px) {
   #main-container {
-    margin-top: 20rem;
+    margin-top: 15rem;
   }
 }
 #main-container #intro-jumbo {
   width: 100%;
-  padding: 8rem 4rem 4rem 4rem;
+  padding: 4rem;
   background-color: #1e9df7;
   color: #fff;
 }
@@ -274,6 +278,11 @@ header a:hover {
   padding: 1rem;
   border-radius: 1rem;
   background-color: #f1f5f9;
+}
+@media (min-width: 1024px) {
+  #main-container .mini-panel-container .mini-panel {
+    max-width: 30%;
+  }
 }
 #main-container .mini-panel-container .mini-panel .fas {
   font-size: 4rem;
@@ -316,15 +325,22 @@ header a:hover {
 }
 #main-container .panel-and-picture-container .panel p {
   color: #777;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
-#main-container .panel-and-picture-container .panel button {
+#main-container .panel-and-picture-container .panel a {
+  text-decoration: none;
+  margin-top: 1rem;
   color: #fff;
   background-color: #1e9df7;
   border: 0.2rem solid #fff;
   padding: 1rem;
   font-size: 2rem;
   border-radius: 0.5rem;
+}
+#main-container .panel-and-picture-container .panel a:hover {
+  color: #1e9df7;
+  background-color: #fff;
+  border: 0.2rem solid #1e9df7;
 }
 #main-container .panel-and-picture-container .picture {
   width: 100%;
@@ -370,7 +386,7 @@ header a:hover {
   padding-bottom: 4rem;
 }
 #main-container .section .tabs .tabs-items .tabs-item .tabs-item-description .item-left {
-  max-width: 45%;
+  max-width: 40%;
   margin-right: 5%;
 }
 #main-container .section .tabs .tabs-items .tabs-item .tabs-item-description .item-left img {
@@ -378,5 +394,17 @@ header a:hover {
   max-width: 100%;
 }
 #main-container .section .tabs .tabs-items .tabs-item .tabs-item-description .item-right {
-  max-width: 45%;
+  max-width: 55%;
+}
+#main-container footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  background-color: #777;
+}
+#main-container footer p {
+  padding: 2rem;
 }
