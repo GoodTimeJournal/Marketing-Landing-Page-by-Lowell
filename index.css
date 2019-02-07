@@ -173,11 +173,6 @@ table {
 html {
   font-size: 62.5%;
 }
-button {
-  box-shadow: 0px 0px 0px transparent;
-  border: 0px solid transparent;
-  text-shadow: 0px 0px 0px transparent;
-}
 h1,
 h2,
 h3,
@@ -316,15 +311,22 @@ header a:hover {
 }
 #main-container .panel-and-picture-container .panel p {
   color: #777;
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
-#main-container .panel-and-picture-container .panel button {
+#main-container .panel-and-picture-container .panel a {
+  text-decoration: none;
+  margin-top: 1rem;
   color: #fff;
   background-color: #1e9df7;
   border: 0.2rem solid #fff;
   padding: 1rem;
   font-size: 2rem;
   border-radius: 0.5rem;
+}
+#main-container .panel-and-picture-container .panel a:hover {
+  color: #1e9df7;
+  background-color: #fff;
+  border: 0.2rem solid #1e9df7;
 }
 #main-container .panel-and-picture-container .picture {
   width: 100%;
